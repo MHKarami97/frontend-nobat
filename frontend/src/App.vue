@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <router-view />
-    <ReloadPrompt />
-  </div>
+  <router-view />
+  <ReloadPrompt />
 </template>
 
 <script setup lang="ts">
-import ReloadPrompt from './components/ReloadPrompt.vue';
+import ReloadPrompt from '@/components/ReloadPrompt.vue';
 </script>
