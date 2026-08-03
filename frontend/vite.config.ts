@@ -8,7 +8,7 @@ export default defineConfig({
     vue(),
     VitePWA({
       registerType: 'prompt',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
+      includeAssets: ["icons/*.png"],
       manifest: {
         name: 'دور گردون - سیستم رزرو آنلاین',
         short_name: 'دور گردون',
@@ -18,10 +18,18 @@ export default defineConfig({
         display: 'standalone',
         lang: 'fa',
         icons: [
-          { src: 'pwa-192x192.png', sizes: '192x192', type: 'image/png' },
-          { src: 'pwa-512x512.png', sizes: '512x512', type: 'image/png' }
-        ]
-      }
+          { src: "icons/icon-48.png", sizes: "48x48", type: "image/png" },
+          { src: "icons/icon-72.png", sizes: "72x72", type: "image/png" },
+          { src: "icons/icon-96.png", sizes: "96x96", type: "image/png" },
+          { src: "icons/icon-144.png", sizes: "144x144", type: "image/png" },
+          { src: "icons/icon-192.png", sizes: "192x192", type: "image/png" },
+          { src: "icons/icon-512.png", sizes: "512x512", type: "image/png" },
+        ],
+      },
+       workbox: {
+        globPatterns: ["**/*.{js,css,html,png,svg,woff2}"],
+        cleanupOutdatedCaches: true,
+      },
     })
   ],
   resolve: {

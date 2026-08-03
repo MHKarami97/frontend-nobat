@@ -10,7 +10,8 @@
     "noUnusedParameters": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["vite/client", "vite-plugin-pwa/vue"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
