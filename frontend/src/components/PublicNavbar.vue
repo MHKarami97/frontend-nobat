@@ -17,8 +17,8 @@ const navLinks = [
 
 function goToPanel() {
   if (auth.isAdmin) router.push('/admin/dashboard');
-  else if (auth.isShopOwner) router.push('/shop-panel');
-  else router.push('/panel');
+  else if (auth.isShopOwner) router.push('/shop-panel/dashboard');
+  else router.push('/panel/appointments');
 }
 </script>
 
