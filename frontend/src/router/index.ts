@@ -28,6 +28,7 @@ const router = createRouter({
         { path: 'dashboard', component: () => import('@/pages/admin/AdminDashboard.vue') },
         { path: 'shops', component: () => import('@/pages/admin/AdminShops.vue') },
         { path: 'users', component: () => import('@/pages/admin/AdminUsers.vue') },
+        { path: 'subscriptions', component: () => import('@/pages/admin/AdminSubscriptions.vue') },
       ]
     },
 
@@ -42,6 +43,7 @@ const router = createRouter({
         { path: 'appointments', component: () => import('@/pages/shop/ShopAppointments.vue') },
         { path: 'schedule', component: () => import('@/pages/shop/ShopSchedule.vue') },
         { path: 'settings', component: () => import('@/pages/shop/ShopSettings.vue') },
+        { path: 'subscription', component: () => import('@/pages/shop/ShopSubscription.vue') },
       ]
     },
 

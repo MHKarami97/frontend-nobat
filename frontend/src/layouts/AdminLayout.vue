@@ -9,6 +9,7 @@ const navItems = [
   { label: 'داشبورد', icon: '📊', to: '/admin/dashboard' },
   { label: 'فروشگاه‌ها', icon: '🏪', to: '/admin/shops' },
   { label: 'کاربران', icon: '👥', to: '/admin/users' },
+  { label: 'اشتراک‌ها', icon: '👑', to: '/admin/subscriptions' },
 ];
 </script>
 
