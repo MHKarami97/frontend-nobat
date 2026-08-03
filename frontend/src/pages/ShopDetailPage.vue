@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { api } from '@/services/api';
 import { useAuthStore } from '@/stores/auth.store';
@@ -8,6 +8,7 @@ import { fromJalali, todayJalali } from '@/utils/date';
 import { dayMap } from '@/utils/mapper';
 import PublicNavbar from '@/components/PublicNavbar.vue';
 import PublicFooter from '@/components/PublicFooter.vue';
+import JalaliDatePicker from '@/components/JalaliDatePicker.vue';
 
 const route = useRoute();
 const router = useRouter();
@@ -27,6 +28,8 @@ onMounted(async () => {
   loading.value = false;
   await loadSlots();
 });
+
+watch(selectedJalali, () => { loadSlots(); });
 
 async function loadSlots() {
   if (!shop.value) return;
@@ -105,8 +108,7 @@ async function book() {
 
           <div class="space-y-1 mb-4">
             <label class="block text-sm font-medium text-neutral-700">تاریخ (شمسی)</label>
-            <input v-model="selectedJalali" @change="loadSlots" type="text" placeholder="1403/01/01"
-              class="w-full px-4 py-2.5 rounded-xl border border-neutral-200 focus:ring-2 focus:ring-primary/20 focus:border-primary transition" />
+            <JalaliDatePicker v-model="selectedJalali" :min-today="true" />
           </div>
 
           <div v-if="slotsLoading" class="grid grid-cols-4 gap-2">
