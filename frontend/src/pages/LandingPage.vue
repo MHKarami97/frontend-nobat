@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-neutral-50 font-sans selection:bg-primary-100 pb-12">
+  <div class="min-h-screen bg-neutral-50 font-sans selection:bg-primary-100">
     
     <!-- Navbar (Glassmorphism) -->
     <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-neutral-100 transition-all duration-300">
@@ -134,7 +134,7 @@
           <div>
             <h2 class="text-3xl md:text-4xl font-black text-neutral-900 leading-tight mb-6">مدیریت نوبت‌ها هیچ‌وقت اینقدر ساده نبود!</h2>
             <p class="text-lg text-neutral-500 mb-10 leading-relaxed">
-              دور گردون با معماری ابری و تکنولوژی PWA، یک راهکار همه‌جانبه برای از بین بردن تداخل نوبت‌ها، صف‌های طولانی و اتلاف وقت است.
+              دور گردون با معماری ابری و تکنولوژی عالی یک راهکار همه‌جانبه برای از بین بردن تداخل نوبت‌ها، صف‌های طولانی و اتلاف وقت است.
             </p>
             
             <div class="space-y-6">
@@ -149,7 +149,7 @@
                 <div class="w-12 h-12 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center text-xl shrink-0">📱</div>
                 <div>
                   <h4 class="font-bold text-neutral-900 text-lg">بدون نیاز به نصب اپلیکیشن</h4>
-                  <p class="text-neutral-500 text-sm mt-1 leading-relaxed">طراحی موبایل‌محور (PWA) به شما اجازه می‌دهد سیستم را مستقیماً در مرورگر گوشی با سرعت بومی اجرا کنید.</p>
+                  <p class="text-neutral-500 text-sm mt-1 leading-relaxed">طراحی موبایل‌محور به شما اجازه می‌دهد سیستم را مستقیماً در مرورگر گوشی با سرعت بومی اجرا کنید.</p>
                 </div>
               </div>
               <div class="flex items-start gap-4">

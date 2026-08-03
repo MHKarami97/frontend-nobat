@@ -30,7 +30,7 @@ async function submit() {
   <div class="min-h-screen bg-neutral-50 flex items-center justify-center px-4">
     <div class="w-full max-w-md bg-white rounded-2xl border border-neutral-100 shadow-sm p-8">
       <div class="text-center mb-8">
-        <h1 class="text-2xl font-bold text-neutral-800">ورود به نوبت‌یاب</h1>
+        <h1 class="text-2xl font-bold text-neutral-800">ورود به دور گردون</h1>
         <p class="text-sm text-neutral-500 mt-1">خوش برگشتید!</p>
       </div>
 
@@ -49,9 +49,6 @@ async function submit() {
       <p class="text-sm text-center text-neutral-500 mt-6">
         حساب ندارید؟
         <router-link to="/register" class="text-primary font-medium hover:underline">ثبت‌نام کنید</router-link>
-      </p>
-      <p class="text-xs text-center text-neutral-400 mt-2">
-        <router-link to="/admin/login" class="hover:underline">ورود مدیران سیستم</router-link>
       </p>
     </div>
   </div>
