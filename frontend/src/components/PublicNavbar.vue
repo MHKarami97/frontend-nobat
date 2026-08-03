@@ -26,7 +26,7 @@ function goToPanel() {
   <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-neutral-100">
     <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
       <router-link to="/" class="text-lg font-bold text-primary flex items-center gap-1.5">
-        <span class="text-xl">📅</span> نوبت‌یاب
+        <span class="text-xl">📅</span> دور‌گردون
       </router-link>
 
       <!-- Desktop links -->
@@ -52,7 +52,7 @@ function goToPanel() {
           </router-link>
           <router-link to="/register"
             class="px-5 py-2 text-sm font-semibold bg-primary text-white rounded-full hover:bg-primary-600 transition shadow-sm">
-            ثبت‌نام
+            ثبت‌نام کاربر
           </router-link>
           <router-link to="/register/shop"
             class="px-5 py-2 text-sm font-semibold border border-primary text-primary rounded-full hover:bg-primary/5 transition">

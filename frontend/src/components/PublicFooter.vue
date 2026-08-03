@@ -6,7 +6,7 @@
       <div class="grid md:grid-cols-4 gap-8 mb-8">
         <div>
           <div class="flex items-center gap-1.5 text-white font-bold text-lg mb-3">
-            <span>📅</span> نوبت‌یاب
+            <span>📅</span> دور‌گردون
           </div>
           <p class="text-sm text-neutral-400 leading-relaxed">
             پلتفرم رزرو نوبت آنلاین برای کسب‌وکارها و مشتریان، ساده، سریع و امن.
@@ -28,21 +28,20 @@
           <ul class="space-y-2 text-sm">
             <li><router-link to="/register/shop" class="hover:text-primary transition">ثبت فروشگاه رایگان</router-link></li>
             <li><router-link to="/login" class="hover:text-primary transition">ورود فروشگاه</router-link></li>
-            <li><router-link to="/admin/login" class="hover:text-primary transition">ورود مدیران سیستم</router-link></li>
           </ul>
         </div>
 
         <div>
           <h4 class="text-white font-semibold mb-3 text-sm">ارتباط با ما</h4>
           <ul class="space-y-2 text-sm text-neutral-400">
-            <li>📧 support@nobat-yab.ir</li>
+            <li>📧 mhkarami97@gmail.com</li>
             <li>📞 ۰۲۱-۱۲۳۴۵۶۷۸</li>
           </ul>
         </div>
       </div>
 
       <div class="border-t border-neutral-800 pt-6 text-center text-sm text-neutral-500">
-        © ۱۴۰۴ نوبت‌یاب. تمام حقوق محفوظ است.
+        © دور‌گردون. تمام حقوق محفوظ است. طراحی توسط <a href="https://mhkarami97.ir/"> mhkarami97</a>
       </div>
     </div>
   </footer>

@@ -16,8 +16,8 @@ async function submit() {
   try {
     const res = await auth.login(form.email, form.password);
     if (res.role === 'system_admin') router.push('/admin/dashboard');
-    else if (res.role === 'shop_owner') router.push('/shop-panel');
-    else router.push('/panel');
+    else if (res.role === 'shop_owner') router.push('/shop-panel/dashboard');
+    else router.push('/panel/appointments');
   } catch (e: any) {
     error.value = e?.response?.data?.error ?? 'خطا در ورود';
   } finally {
@@ -30,7 +30,7 @@ async function submit() {
   <div class="min-h-screen bg-neutral-50 flex items-center justify-center px-4">
     <div class="w-full max-w-md bg-white rounded-2xl border border-neutral-100 shadow-sm p-8">
       <div class="text-center mb-8">
-        <h1 class="text-2xl font-bold text-neutral-800">ورود به نوبت‌یاب</h1>
+        <h1 class="text-2xl font-bold text-neutral-800">ورود به دور‌گردون</h1>
         <p class="text-sm text-neutral-500 mt-1">خوش برگشتید!</p>
       </div>
 

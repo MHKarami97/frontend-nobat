@@ -14,7 +14,7 @@ const navItems = [
 <template>
   <div class="min-h-screen bg-neutral-50">
     <header class="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-neutral-100 px-4 py-3 flex items-center justify-between">
-      <router-link to="/" class="text-lg font-bold text-primary">نوبت‌یاب</router-link>
+      <router-link to="/" class="text-lg font-bold text-primary">دور‌گردون</router-link>
       <div class="flex items-center gap-3">
         <span class="text-sm text-neutral-600 hidden sm:block">{{ auth.fullName }}</span>
         <button @click="auth.logout(); router.push('/')" class="text-sm text-red-500 hover:underline">خروج</button>

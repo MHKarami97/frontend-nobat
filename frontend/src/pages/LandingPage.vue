@@ -27,7 +27,7 @@ const features = [
 ];
 
 const testimonials = [
-  { name: 'سارا محمدی', role: 'مدیر آرایشگاه بانو', avatar: '👩🏻', text: 'از وقتی نوبت‌یاب رو فعال کردیم، تماس‌های مکرر برای گرفتن نوبت به صفر رسید. مشتری‌ها خودشون رزرو می‌کنن.', rating: 5 },
+  { name: 'سارا محمدی', role: 'مدیر آرایشگاه بانو', avatar: '👩🏻', text: 'از وقتی دور‌گردون رو فعال کردیم، تماس‌های مکرر برای گرفتن نوبت به صفر رسید. مشتری‌ها خودشون رزرو می‌کنن.', rating: 5 },
   { name: 'علی رضایی', role: 'مشتری', avatar: '👨🏻', text: 'خیلی راحت توانستم نوبت دندانپزشکی بگیرم، بدون اینکه با کسی تماس بگیرم. فقط چند ثانیه طول کشید.', rating: 5 },
   { name: 'مریم احمدی', role: 'صاحب کلینیک پوست', avatar: '👩🏻‍⚕️', text: 'مدیریت تقویم هفتگی و رد یا تایید نوبت‌ها خیلی ساده شده. حتی نسخه رایگان هم برای شروع کافی بود.', rating: 4 },
 ];
@@ -86,7 +86,7 @@ const stats = [
     <!-- Features -->
     <section class="max-w-6xl mx-auto px-4 py-20">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-neutral-800 mb-3">چرا نوبت‌یاب؟</h2>
+        <h2 class="text-3xl font-bold text-neutral-800 mb-3">چرا دور‌گردون</h2>
         <p class="text-neutral-500">امکاناتی که تجربه رزرو نوبت را برای همه ساده‌تر می‌کند</p>
       </div>
       <div class="grid md:grid-cols-3 gap-5">
@@ -122,7 +122,7 @@ const stats = [
       <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-neutral-800 mb-3">نظرات کاربران</h2>
-          <p class="text-neutral-500">تجربه واقعی فروشگاه‌ها و مشتریانی که از نوبت‌یاب استفاده می‌کنند</p>
+          <p class="text-neutral-500">تجربه واقعی فروشگاه‌ها و مشتریانی که از دور‌گردون استفاده می‌کنند</p>
         </div>
         <div class="grid md:grid-cols-3 gap-5">
           <div v-for="t in testimonials" :key="t.name"
@@ -147,7 +147,7 @@ const stats = [
     <section class="bg-gradient-to-br from-neutral-800 to-neutral-900 text-white py-20">
       <div class="max-w-3xl mx-auto px-4 text-center">
         <h2 class="text-3xl font-bold mb-4">صاحب کسب‌وکار هستید؟</h2>
-        <p class="text-neutral-300 mb-8">با نوبت‌یاب رایگان شروع کنید. تا ۵۰ رزرو در هفته، کاملاً رایگان — بدون کارت بانکی.</p>
+        <p class="text-neutral-300 mb-8">با دور‌گردون رایگان شروع کنید. تا ۵۰ رزرو در هفته، کاملاً رایگان — بدون کارت بانکی.</p>
         <button @click="router.push('/register/shop')"
           class="px-8 py-3.5 bg-primary text-white font-semibold rounded-full hover:bg-primary-600 transition shadow-lg">
           ثبت فروشگاه رایگان
