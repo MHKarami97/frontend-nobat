@@ -14,13 +14,13 @@ export const roleMap: Record<string, string> = {
 };
 
 export const dayMap: Record<number, string> = {
-  0: 'یکشنبه',
-  1: 'دوشنبه',
-  2: 'سه‌شنبه',
-  3: 'چهارشنبه',
-  4: 'پنجشنبه',
-  5: 'جمعه',
-  6: 'شنبه',
+  0: 'شنبه',
+  1: 'یکشنبه',
+  2: 'دوشنبه',
+  3: 'سه‌شنبه',
+  4: 'چهارشنبه',
+  5: 'پنجشنبه',
+  6: 'جمعه',
 };
 
 export function getStatusBadge(status: string): { label: string; classes: string } {
