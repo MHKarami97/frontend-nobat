@@ -4,7 +4,7 @@ import { useRoute, useRouter } from 'vue-router';
 import { api } from '@/services/api';
 import { useAuthStore } from '@/stores/auth.store';
 import { resolveImageUrl } from '@/utils/image';
-import { toJalali, fromJalali, todayJalali } from '@/utils/date';
+import { fromJalali, todayJalali } from '@/utils/date';
 import { dayMap } from '@/utils/mapper';
 
 const route = useRoute();
