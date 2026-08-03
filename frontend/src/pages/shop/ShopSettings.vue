@@ -4,10 +4,13 @@ import { api } from '@/services/api';
 import { useShopStore } from '@/stores/shop.store';
 import BaseInput from '@/components/BaseInput.vue';
 import { resolveImageUrl } from '@/utils/image';
+import { compressImage, formatFileSize } from '@/utils/imageCompress';
 
 const shopStore = useShopStore();
 const saving = ref(false);
 const uploadingLogo = ref(false);
+const logoError = ref('');
+const MAX_RAW_SIZE_BYTES = 8 * 1024 * 1024; // 8MB pre-compression cap
 const success = ref(false);
 const error = ref('');
 
@@ -43,16 +46,32 @@ async function save() {
 async function uploadLogo(event: Event) {
   const input = event.target as HTMLInputElement;
   if (!input.files?.[0]) return;
+  const rawFile = input.files[0];
+
+  logoError.value = '';
+
+  if (rawFile.size > MAX_RAW_SIZE_BYTES) {
+    logoError.value = `حجم فایل باید کمتر از ${formatFileSize(MAX_RAW_SIZE_BYTES)} باشد`;
+    input.value = '';
+    return;
+  }
+
   uploadingLogo.value = true;
-  const fd = new FormData();
-  fd.append('file', input.files[0]);
   try {
+    const compressed = await compressImage(rawFile, { maxWidth: 512, maxHeight: 512, quality: 0.8 });
+
+    const fd = new FormData();
+    fd.append('file', compressed);
+
     await api.upload('/api/upload/logo', fd);
     api.clearCache('/api/shops');
     shopStore.clearShop();
     await shopStore.fetchMyShop();
+  } catch (e: any) {
+    logoError.value = e?.response?.data?.error ?? e?.message ?? 'خطا در آپلود لوگو';
   } finally {
     uploadingLogo.value = false;
+    input.value = '';
   }
 }
 </script>
@@ -69,10 +88,12 @@ async function uploadLogo(event: Event) {
           <img v-if="shopStore.myShop?.logo_key" :src="resolveImageUrl(shopStore.myShop.logo_key as string)" class="w-full h-full object-cover" />
         </div>
         <label class="cursor-pointer px-4 py-2 text-sm bg-neutral-100 hover:bg-neutral-200 rounded-xl transition font-medium text-neutral-700">
-          {{ uploadingLogo ? 'در حال آپلود...' : 'تغییر لوگو' }}
+          {{ uploadingLogo ? 'در حال فشرده‌سازی و آپلود...' : 'تغییر لوگو' }}
           <input type="file" accept="image/*" class="hidden" @change="uploadLogo" :disabled="uploadingLogo" />
         </label>
       </div>
+      <p v-if="logoError" class="text-sm text-red-500 mt-3">{{ logoError }}</p>
+      <p class="text-xs text-neutral-400 mt-3">تصاویر قبل از آپلود به‌صورت خودکار فشرده می‌شوند (حداکثر ۵۱۲×۵۱۲ پیکسل).</p>
     </div>
 
     <form @submit.prevent="save" class="bg-white rounded-2xl border border-neutral-100 shadow-sm p-6 space-y-4">
