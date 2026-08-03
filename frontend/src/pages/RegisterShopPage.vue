@@ -50,7 +50,7 @@ async function submit() {
         <BaseInput v-model="form.full_name" label="نام و نام‌خانوادگی" required :disabled="loading" />
         <BaseInput v-model="form.email" label="ایمیل" type="email" required :disabled="loading" />
         <BaseInput v-model="form.mobile" label="موبایل" type="tel" required :disabled="loading" />
-        <BaseInput v-model="form.password" label="رمز عبور" type="password" required :disabled="loading" />
+        <BaseInput v-model="form.password" label="رمز عبور (حداقل ۱۰ کاراکتر، شامل حرف بزرگ، کوچک و عدد)" type="password" required :disabled="loading" />
 
         <p class="text-xs font-semibold text-neutral-400 uppercase tracking-widest pt-2">اطلاعات فروشگاه</p>
         <BaseInput v-model="form.shop_name" label="نام فروشگاه" required :disabled="loading" />

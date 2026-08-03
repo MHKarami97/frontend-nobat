@@ -32,7 +32,7 @@ async function submit() {
         <BaseInput v-model="form.full_name" label="نام و نام‌خانوادگی" required :disabled="loading" />
         <BaseInput v-model="form.email" label="ایمیل" type="email" required :disabled="loading" />
         <BaseInput v-model="form.mobile" label="شماره موبایل" type="tel" placeholder="09..." required :disabled="loading" />
-        <BaseInput v-model="form.password" label="رمز عبور (حداقل ۸ کاراکتر)" type="password" required :disabled="loading" />
+        <BaseInput v-model="form.password" label="رمز عبور (حداقل ۱۰ کاراکتر، شامل حرف بزرگ، کوچک و عدد)" type="password" required :disabled="loading" />
         <p v-if="error" class="text-sm text-red-500 text-center">{{ error }}</p>
         <button type="submit" :disabled="loading"
           class="w-full py-3 bg-primary text-white font-semibold rounded-xl hover:bg-primary-600 transition disabled:opacity-50">

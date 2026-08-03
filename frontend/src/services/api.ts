@@ -2,8 +2,9 @@ import axios, { type AxiosRequestConfig } from 'axios';
 import { useAuthStore } from '@/stores/auth.store';
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8787';
+const REQUEST_TIMEOUT_MS = 15_000;
 
-const http = axios.create({ baseURL: BASE_URL });
+const http = axios.create({ baseURL: BASE_URL, timeout: REQUEST_TIMEOUT_MS });
 
 // Cache store
 const cache = new Map<string, { data: unknown; expiresAt: number }>();
@@ -33,7 +34,7 @@ export const api = {
     if (cached && Date.now() < cached.expiresAt) return cached.data as T;
 
     const res = await http.get<T>(url, { params } as AxiosRequestConfig);
-    cache.set(key, { data: res.data, expiresAt: Date.now() + ttlMs });
+    if (ttlMs > 0) cache.set(key, { data: res.data, expiresAt: Date.now() + ttlMs });
     return res.data;
   },
 
