@@ -10,8 +10,8 @@ export default defineConfig({
       registerType: 'prompt',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
       manifest: {
-        name: 'نوبت‌یاب - سیستم رزرو آنلاین',
-        short_name: 'نوبت‌یاب',
+        name: 'دور گردون - سیستم رزرو آنلاین',
+        short_name: 'دور گردون',
         description: 'رزرو نوبت آنلاین هوشمند',
         theme_color: '#6366f1',
         background_color: '#f8fafc',
