@@ -43,7 +43,7 @@ const router = createRouter({
         { path: 'appointments', component: () => import('@/pages/shop/ShopAppointments.vue') },
         { path: 'schedule', component: () => import('@/pages/shop/ShopSchedule.vue') },
         { path: 'settings', component: () => import('@/pages/shop/ShopSettings.vue') },
-        { path: 'subscription', component: () => import('@/pages/shop/ShopSubscription.vue') },
+        // { path: 'subscription', component: () => import('@/pages/shop/ShopSubscription.vue') },
       ]
     },
 

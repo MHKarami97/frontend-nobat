@@ -10,7 +10,7 @@ const navItems = [
   { label: 'نوبت‌ها', icon: '📅', to: '/shop-panel/appointments' },
   { label: 'تقویم', icon: '🗓', to: '/shop-panel/schedule' },
   { label: 'تنظیمات', icon: '⚙️', to: '/shop-panel/settings' },
-  { label: 'اشتراک', icon: '👑', to: '/shop-panel/subscription' },
+  // { label: 'اشتراک', icon: '👑', to: '/shop-panel/subscription' },
 ];
 </script>
 
